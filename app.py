@@ -128,32 +128,32 @@ st.markdown("""
 # --- VERIFIED PURE API CALIBRATIONS (8 METRICS including Claude's feedback additions) ---
 METRIC_META = {
     "spacing_distance": {
-        "name": "Teammate Spacing", "short": "Spacing", "category": "Positioning",
-        "type": "floor", "baseline": 2400, "target": 3200, "target_dia": 3900, "unit": "uu",
-        "coaching": "Gold 2v2 involves heavy double-committing. Spread out to cover transition lanes cleanly.",
-        "whys": "Bunching occurs when you panic-rotate or lack trust, leaving no back-man to protect against long booms.",
-        "hows": "Force yourself to stay one full pad-lane away. If your teammate is fighting in the corner, wait at the mid-field."
+        "name": "Average Spacing", "short": "Spacing", "category": "Positioning",
+        "type": "floor", "baseline": 2200, "target": 2800, "target_dia": 3300, "unit": "uu",
+        "coaching": "Optimal spacing allows you to cover your teammate's challenges without getting beaten by the same clear.",
+        "whys": "If this is red, you are playing 'fetch' alongside your teammate instead of covering the open space they leave behind.",
+        "hows": "If your teammate dives into the opponent's corner, stay near the midfield line. Do not drive into the corner with them."
     },
     "defensive_third": {
-        "name": "Defensive Third %", "short": "Def Third %", "category": "Positioning",
-        "type": "ceiling", "baseline": 64.0, "target": 54.0, "target_dia": 46.0, "unit": "%",
-        "coaching": "Don't get pinned in your own end. Pinballing on your backline wears down your boost tanks.",
-        "whys": "Spending half the match trapped in your defensive zone is a sign of weak clears and poor possession control.",
-        "hows": "Stop soft-touching balls in corners. Smash the ball high off your own backboard to clear it."
+        "name": "Time in Defensive Third", "short": "Def Third", "category": "Positioning",
+        "type": "ceiling", "baseline": 48, "target": 40, "target_dia": 35, "unit": "%",
+        "coaching": "Spending too much time in your defensive third means you are constantly under siege and struggling to clear the ball.",
+        "whys": "Usually caused by weak clears, booming the ball back to the opponent, or sitting too deep in net.",
+        "hows": "Focus on controlled touches to your teammate rather than just booming the ball downfield when you make a save."
     },
     "zero_boost_time": {
-        "name": "Zero-Boost Uptime", "short": "0-Boost Time", "category": "Boost Economy",
-        "type": "ceiling", "baseline": 95, "target": 40, "target_dia": 25, "unit": "s",
-        "coaching": "Avoid starving completely. Collect mini-pads fluidly along paths to sustain small reserves.",
-        "whys": "Running completely out of boost prevents aerial saves, blocks recoveries, and renders you useless.",
-        "hows": "Always keep a mental 20-30 boost 'insurance policy' reserve. Never deplete your tank completely."
+        "name": "Zero Boost Time", "short": "Empty Boost", "category": "Boost Management",
+        "type": "ceiling", "baseline": 55, "target": 40, "target_dia": 25, "unit": "s",
+        "coaching": "High-level players almost never hit true 0 boost; they always leave 10-15 in the tank for recoveries.",
+        "whys": "If this is consistently red, you are using boost to drive at top speed when a simple flip would maintain supersonic speed for free.",
+        "hows": "Flip more to move around the pitch, and path over small pads when rotating back."
     },
     "pad_ratio": {
-        "name": "Small/Big Pad Ratio", "short": "Pad Ratio", "category": "Boost Economy",
-        "type": "floor", "baseline": 0.5, "target": 1.5, "target_dia": 2.5, "unit": "x",
-        "coaching": "Break the 100-pad dependency habit. Weave mini-pads into your rotation lines to stay relevant.",
-        "whys": "Driving all the way out of play to grab 100-pads leaves your teammate in a constant 1v2 situation.",
-        "hows": "Commit to the 'mini-pad highway'. Memorize the circular patterns of small pads in midfield."
+        "name": "Small/Big Pad Ratio", "short": "Pad Ratio", "category": "Boost Management",
+        "type": "floor", "baseline": 1.5, "target": 2.5, "target_dia": 3.5, "unit": "x",
+        "coaching": "Higher ranks rely heavily on small pads to maintain pressure without leaving the play.",
+        "whys": "If this is red, you are abandoning your teammate in 2v1 situations because you are driving all the way to the corner for a 100-boost orb.",
+        "hows": "Learn the 'loops' of small pads around the midfield and defensive D."
     },
     "powerslide_time": {
         "name": "Powerslide Duration", "short": "Powerslide Time", "category": "Physics & Speed",
@@ -164,10 +164,10 @@ METRIC_META = {
     },
     "airtime": {
         "name": "Aerial Duration", "short": "Airtime", "category": "Physics & Speed",
-        "type": "ceiling", "baseline": 65, "target": 42, "target_dia": 28, "unit": "s",
-        "coaching": "Avoid floaty, low-probability aerial challenge attempts. If you miss, your duo is left in a 1v2.",
-        "whys": "Over-committing to high, floaty aerial balls wastes massive boost reserves and results in vulnerable recoveries.",
-        "hows": "Only fly if you are guaranteed to reach the ball first. Otherwise, stay grounded and protect net."
+        "type": "floor", "baseline": 45, "target": 65, "target_dia": 85, "unit": "s",
+        "coaching": "Higher ranks spend more time airborne via fast aerials and wall recoveries.",
+        "whys": "If this number drops too low, it means you are glued to the floor, waiting for bounces, and getting beaten to high balls.",
+        "hows": "Incorporate the Pop -> Flatten -> Strike wall-jumps you are practicing to comfortably attack balls in the air."
     },
     "shot_selectivity": {
         "name": "Goal/Shot Conversion", "short": "G/S Ratio", "category": "Attack Dynamics",
