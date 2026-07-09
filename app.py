@@ -169,7 +169,7 @@ METRIC_META = {
         "whys": "If this number drops too low, it means you are glued to the floor, waiting for bounces, and getting beaten to high balls.",
         "hows": "Incorporate the Pop -> Flatten -> Strike wall-jumps you are practicing to comfortably attack balls in the air."
     },
-    "shot_selectivity": {
+    "shot_conversion": {
         "name": "Goal/Shot Conversion", "short": "G/S Ratio", "category": "Attack Dynamics",
         "type": "range", "baseline": 30.0, "target": 45.0, "target_dia": 35.0, "unit": "%",
         "coaching": "Maintain a healthy balance of clinical shooting and high-volume offensive pressure.",
